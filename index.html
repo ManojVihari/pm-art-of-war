@@ -5,189 +5,202 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A Startup Founder's Guide to the Art of War | Ravi Warrier</title>
 
-  <!-- ===== Styles & Fonts ===== -->
-  <link rel="stylesheet" href="index.css" />
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="book.jpg" />
+
+  <!-- Icons, Fonts & Tailwind -->
   <script src="https://kit.fontawesome.com/b800ee9c7d.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    /* Fade-in animation */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 
-<body>
-  <!-- ===== TOP BANNER ===== -->
-  <div class="banner">🎓 Course Project – Marketing Website Demo</div>
+<body class="bg-white text-gray-800">
+  <!-- ===== Top Banner ===== -->
+  <div class="w-full bg-yellow-300 text-center py-2 font-semibold text-gray-800">
+    🎓 Course Project – Marketing Website Demo
+  </div>
 
-  <!-- ===== NAVBAR ===== -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Ravi Warrier</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about-book">The Book</a></li>
-        <li><a href="#themes">Insights</a></li>
-        <li><a href="#buy-book">Buy</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#author">Author</a></li>
-        <li><a href="#contact">Connect</a></li>
+  <!-- ===== Navbar ===== -->
+  <header class="sticky top-0 z-50 bg-white shadow-md backdrop-blur">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="text-xl font-bold text-gray-800">Ravi Warrier</div>
+      <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#about-book" class="hover:text-blue-600 transition">The Book</a></li>
+        <li><a href="#themes" class="hover:text-blue-600 transition">Insights</a></li>
+        <li><a href="#buy-book" class="hover:text-blue-600 transition">Buy</a></li>
+        <li><a href="#reviews" class="hover:text-blue-600 transition">Reviews</a></li>
+        <li><a href="#author" class="hover:text-blue-600 transition">Author</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Connect</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section id="home" class="hero fade-in">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>A Startup Founder’s Guide<br><span>to the Art of War</span></h1>
-        <p class="tagline">Timeless Strategy. Modern Entrepreneurship.</p>
-        <p class="subtext">By <strong>Ravi Warrier</strong> • Paperback – 8 July 2025</p>
-        <div class="hero-buttons">
-          <a href="#buy-book" class="btn primary">Get the Book</a>
-          <a href="#about-book" class="btn ghost">Learn More</a>
+  <!-- ===== Hero ===== -->
+  <section id="home" class="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,215,0,0.15),_transparent_60%)]"></div>
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 relative z-10">
+      <div class="md:w-1/2 space-y-6">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          A Startup Founder’s Guide<br><span class="text-yellow-400">to the Art of War</span>
+        </h1>
+        <p class="text-lg italic text-gray-200">Timeless Strategy. Modern Entrepreneurship.</p>
+        <p>By <strong>Ravi Warrier</strong> • Paperback – 8 July 2025</p>
+        <div class="space-x-4 mt-4">
+          <a href="#buy-book" class="bg-yellow-400 text-gray-900 px-5 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">Get the Book</a>
+          <a href="#about-book" class="border border-yellow-400 text-yellow-400 px-5 py-2 rounded-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 transition">Learn More</a>
         </div>
       </div>
-      <img src="book.jpg" alt="Book Cover" class="book-cover" />
+      <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+        <img src="book.jpg" alt="Book Cover" class="rounded-lg shadow-2xl w-64 md:w-80 transform hover:scale-105 transition duration-500" />
+      </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT BOOK ===== -->
-  <section id="about-book" class="section fade-in">
-    <h2>The Book</h2>
-    <div class="content">
-      <p>
-        <em>A Startup Founder’s Guide to the Art of War</em> reimagines Sun Tzu’s timeless philosophy for startup founders. 
-        In a world where competition is fierce and uncertainty reigns, strategy isn’t optional — it’s survival.
-      </p>
-      <ul class="highlights">
-        <li>💡 Decode ancient wisdom into modern startup tactics</li>
-        <li>⚔️ Learn when to pivot, when to strike, and when to retreat</li>
-        <li>🏔️ Understand your competitive landscape before acting</li>
-        <li>🧭 Develop the founder’s calm and clarity amid chaos</li>
-      </ul>
-    </div>
+  <!-- ===== About ===== -->
+  <section id="about-book" class="max-w-5xl mx-auto py-20 px-6 text-center fade-in">
+    <h2 class="text-3xl font-bold mb-6">The Book</h2>
+    <p class="text-lg mb-8">
+      <em>A Startup Founder’s Guide to the Art of War</em> reimagines Sun Tzu’s timeless philosophy for startup founders. 
+      In a world where competition is fierce and uncertainty reigns, strategy isn’t optional — it’s survival.
+    </p>
+    <ul class="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+      <li>💡 Decode ancient wisdom into modern startup tactics</li>
+      <li>⚔️ Learn when to pivot, when to strike, and when to retreat</li>
+      <li>🏔️ Understand your competitive landscape before acting</li>
+      <li>🧭 Develop the founder’s calm and clarity amid chaos</li>
+    </ul>
   </section>
 
-  <!-- ===== KEY INSIGHTS ===== -->
-  <section id="themes" class="section light-bg fade-in">
-    <h2>Key Insights</h2>
-    <p class="section-intro">
+  <!-- ===== Key Insights ===== -->
+  <section id="themes" class="bg-gradient-to-b from-gray-50 to-gray-100 py-20 text-center fade-in">
+    <h2 class="text-3xl font-bold mb-8">Key Insights</h2>
+    <p class="max-w-3xl mx-auto mb-12 text-gray-600">
       The Art of War, reimagined for the startup battlefield. Each principle is a weapon in your entrepreneurial arsenal.
     </p>
-    <div class="themes-grid">
-      <div class="theme-card">
-        <i class="fa-solid fa-chess-knight icon"></i>
-        <h3>Strategy Over Strength</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition transform hover:-translate-y-2 hover:bg-yellow-50">
+        <i class="fa-solid fa-chess-knight text-4xl text-yellow-500 mb-4"></i>
+        <h3 class="font-semibold text-lg mb-2">Strategy Over Strength</h3>
         <p>Win through intelligence, not intensity. Out-think, not outspend.</p>
       </div>
-      <div class="theme-card">
-        <i class="fa-solid fa-map-location-dot icon"></i>
-        <h3>Know Your Terrain</h3>
+      <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition transform hover:-translate-y-2 hover:bg-yellow-50">
+        <i class="fa-solid fa-map-location-dot text-4xl text-yellow-500 mb-4"></i>
+        <h3 class="font-semibold text-lg mb-2">Know Your Terrain</h3>
         <p>Understand markets, trends, and customer psychology before moving.</p>
       </div>
-      <div class="theme-card">
-        <i class="fa-solid fa-mountain icon"></i>
-        <h3>The Founder’s Discipline</h3>
+      <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition transform hover:-translate-y-2 hover:bg-yellow-50">
+        <i class="fa-solid fa-mountain text-4xl text-yellow-500 mb-4"></i>
+        <h3 class="font-semibold text-lg mb-2">The Founder’s Discipline</h3>
         <p>Train your team and mindset for endurance, not instant wins.</p>
       </div>
-      <div class="theme-card">
-        <i class="fa-solid fa-sync-alt icon"></i>
-        <h3>Adapt Under Fire</h3>
+      <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition transform hover:-translate-y-2 hover:bg-yellow-50">
+        <i class="fa-solid fa-sync-alt text-4xl text-yellow-500 mb-4"></i>
+        <h3 class="font-semibold text-lg mb-2">Adapt Under Fire</h3>
         <p>In chaos lies opportunity. Agility is your true defense.</p>
       </div>
-      <div class="theme-card">
-        <i class="fa-solid fa-eye icon"></i>
-        <h3>Clarity in Confusion</h3>
+      <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition transform hover:-translate-y-2 hover:bg-yellow-50">
+        <i class="fa-solid fa-eye text-4xl text-yellow-500 mb-4"></i>
+        <h3 class="font-semibold text-lg mb-2">Clarity in Confusion</h3>
         <p>Calm leaders make sharp decisions — confusion is the enemy’s ally.</p>
       </div>
-      <div class="theme-card">
-        <i class="fa-solid fa-trophy icon"></i>
-        <h3>Vision Beyond Victory</h3>
+      <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition transform hover:-translate-y-2 hover:bg-yellow-50">
+        <i class="fa-solid fa-trophy text-4xl text-yellow-500 mb-4"></i>
+        <h3 class="font-semibold text-lg mb-2">Vision Beyond Victory</h3>
         <p>Build not just for today’s win, but for tomorrow’s empire.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== BUY THE BOOK ===== -->
-  <section id="buy-book" class="section fade-in light-bg">
-    <h2>Buy the Book</h2>
-    <p class="section-intro">
-      Ready to level up your founder mindset? <br>
+  <!-- ===== Buy Book ===== -->
+  <section id="buy-book" class="py-20 text-center bg-gradient-to-r from-yellow-100 via-yellow-50 to-white fade-in">
+    <h2 class="text-3xl font-bold mb-6 text-gray-900">Buy the Book</h2>
+    <p class="max-w-3xl mx-auto mb-10 text-gray-700">
+      Ready to level up your founder mindset?<br>
       <strong>Timeless strategy. Modern leadership. Real-world startup wins.</strong>
     </p>
-
-    <div class="buy-buttons">
-      <a href="https://www.amazon.in/Startup-Founders-Guide-Art-War/dp/B0FH2V1M7P" target="_blank" class="btn primary">
-        <i class="fa-brands fa-amazon"></i> Amazon
-      </a>
-      <a href="https://notionpress.com/in/read/a-startup-founder-s-guide-to-the-art-of-war?srsltid=AfmBOopNONcXPwSuhFlw6K3gntVos-O7AQsdUn5CCYBBjwdOTwXhSsdE" target="_blank" class="btn secondary">
-        <i class="fa-solid fa-book-open"></i> Notion Press
-      </a>
-      <a href="https://www.flipkart.com/startup-founder-s-guide-art-war/p/itmf002c2b03ce28?pid=9798899843082&affid=editornoti" target="_blank" class="btn secondary">
-        <i class="fa-solid fa-cart-shopping"></i> Flipkart
-      </a>
-      <a href="https://books.google.co.in/books/about/A_Startup_Founder_s_Guide_to_the_Art_of.html?id=Nxp0EQAAQBAJ&redir_esc=y" target="_blank" class="btn primary">
-        <i class="fa-brands fa-google"></i> Google Books
-      </a>
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <a href="https://www.amazon.in/Startup-Founders-Guide-Art-War/dp/B0FH2V1M7P" target="_blank" class="bg-yellow-500 text-gray-900 px-5 py-3 rounded-lg font-semibold hover:bg-yellow-400 shadow hover:shadow-lg transition"><i class="fa-brands fa-amazon"></i> Amazon</a>
+      <a href="https://notionpress.com/read/a-startup-founder-s-guide-to-the-art-of-war" target="_blank" class="bg-white border-2 border-yellow-500 text-yellow-700 px-5 py-3 rounded-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 shadow-sm hover:shadow-lg transition"><i class="fa-solid fa-book-open"></i> Notion Press</a>
+      <a href="https://www.flipkart.com/startup-founder-s-guide-art-war/p/itmf002c2b03ce28" target="_blank" class="bg-white border-2 border-yellow-500 text-yellow-700 px-5 py-3 rounded-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 shadow-sm hover:shadow-lg transition"><i class="fa-solid fa-cart-shopping"></i> Flipkart</a>
+      <a href="https://books.google.co.in/books/about/A_Startup_Founder_s_Guide_to_the_Art_of.html?id=Nxp0EQAAQBAJ" target="_blank" class="bg-yellow-500 text-gray-900 px-5 py-3 rounded-lg font-semibold hover:bg-yellow-400 shadow hover:shadow-lg transition"><i class="fa-brands fa-google"></i> Google Books</a>
     </div>
-
-    <p class="cta-text">
-      <strong>Own your strategy. Master the battlefield. Build your empire.</strong>
-    </p>
+    <p class="font-semibold text-lg text-gray-800 mt-4">Own your strategy. Master the battlefield. Build your empire.</p>
   </section>
 
-  <!-- ===== REVIEWS ===== -->
-  <section id="reviews" class="section fade-in">
-    <h2>What Smart People Say</h2>
-    <p class="section-intro">
+  <!-- ===== Reviews ===== -->
+  <section id="reviews" class="bg-gray-100 py-20 text-center fade-in">
+    <h2 class="text-3xl font-bold mb-6">What Smart People Say</h2>
+    <p class="max-w-3xl mx-auto mb-10 text-gray-600">
       Readers, strategists, and founders share why this book is redefining how entrepreneurs think about strategy.
     </p>
-    <div class="themes-grid">
-      <div class="theme-card">
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
         <p>“A tactical masterpiece for anyone who leads in chaos. Ravi bridges ancient wisdom with modern execution flawlessly.”</p>
-        <h4>— Priya Deshmukh, Founder, GrowthSprint</h4>
+        <h4 class="mt-4 font-semibold">— Priya Deshmukh</h4>
       </div>
-      <div class="theme-card">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
         <p>“Finally, a business book that teaches founders how to think, not just how to hustle.”</p>
-        <h4>— Arjun Mehta, Angel Investor</h4>
+        <h4 class="mt-4 font-semibold">— Arjun Mehta</h4>
       </div>
-      <div class="theme-card">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
         <p>“Every founder should read this before their first pitch deck. It changes how you approach competition forever.”</p>
-        <h4>— Kavya Nair, Product Strategist</h4>
+        <h4 class="mt-4 font-semibold">— Kavya Nair</h4>
       </div>
     </div>
   </section>
 
-  <!-- ===== AUTHOR ===== -->
-  <section id="author" class="section fade-in">
-    <h2>About the Author</h2>
-    <div class="author-section">
-      <img src="author.jpg" alt="Ravi Warrier" class="author-photo" />
-      <div class="author-bio">
-        <p><strong>Ravi Warrier</strong> is a strategist and entrepreneur who fuses ancient wisdom with modern leadership. 
-        Through his writing, workshops, and mentoring, he helps founders develop mental clarity, strategic thinking, and operational excellence.</p>
-      </div>
+  <!-- ===== Author ===== -->
+  <section id="author" class="py-20 text-center fade-in">
+    <h2 class="text-3xl font-bold mb-6">About the Author</h2>
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+      <img src="author.jpg" alt="Ravi Warrier" class="w-48 h-48 object-cover rounded-full shadow-lg ring-4 ring-yellow-300" />
+      <p class="text-lg text-gray-700 max-w-xl">
+        <strong>Ravi Warrier</strong> is a strategist and entrepreneur who fuses ancient wisdom with modern leadership. 
+        Through his writing, workshops, and mentoring, he helps founders develop mental clarity, strategic thinking, and operational excellence.
+      </p>
     </div>
   </section>
 
-  <!-- ===== CONNECT ===== -->
-  <section id="contact" class="section light-bg fade-in">
-    <h2>Stay Connected</h2>
-    <p>Join Ravi’s newsletter for insights, updates, and strategies for modern founders.</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/raviwarrier">LinkedIn</a>
-      <a href="https://www.instagram.com/raviwarrier/">Instagram</a>
-      <a href="https://raviwarrier.com/">Website</a>
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="bg-gray-900 text-white py-20 text-center fade-in">
+    <h2 class="text-3xl font-bold mb-6">Stay Connected</h2>
+    <p class="text-gray-300 mb-6">Join Ravi’s newsletter for insights, updates, and strategies for modern founders.</p>
+    <div class="flex justify-center gap-6 mb-8">
+      <a href="https://www.linkedin.com/in/raviwarrier" class="hover:text-yellow-400 transition"><i class="fab fa-linkedin text-2xl"></i></a>
+      <a href="https://www.instagram.com/raviwarrier/" class="hover:text-yellow-400 transition"><i class="fab fa-instagram text-2xl"></i></a>
+      <a href="https://raviwarrier.com/" class="hover:text-yellow-400 transition"><i class="fa-solid fa-globe text-2xl"></i></a>
     </div>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
+    <form class="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
+      <input type="email" placeholder="Enter your email" class="p-3 rounded-md text-gray-800 w-full" required />
+      <button type="submit" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-500 transition">Subscribe</button>
     </form>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>© 2025 Ravi Warrier. All rights reserved.</p>
+  <!-- ===== Footer ===== -->
+  <footer class="bg-gray-800 text-gray-300 text-center py-4">
+    © 2025 Ravi Warrier. All rights reserved.
   </footer>
 
-  <script src="index.js"></script>
+  <!-- Fade-in Scroll Script -->
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
