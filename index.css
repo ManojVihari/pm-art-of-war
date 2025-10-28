@@ -409,6 +409,69 @@ header {
   background: #7f1215;
 }
 
+/* ===== BUY BOOK SECTION ===== */
+#buy-book {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#buy-book .section-intro {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.buy-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.buy-buttons .btn i {
+  margin-right: 8px;
+}
+
+.reviews {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reviews h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+}
+
+.review-card span {
+  display: block;
+  margin-top: 0.8rem;
+  color: #555;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+.cta-text {
+  margin-top: 2.5rem;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+
 /* =========================================
    FOOTER
    ========================================= */
